@@ -1,0 +1,42 @@
+/* index.css */
+
+/* Import Tailwind layers */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Apply smooth fonts & transitions globally */
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f9fafb; /* fallback bg (light gray) */
+  color: #111827; /* neutral text */
+}
+
+/* Remove list styles globally */
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Anchor default */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Smooth transitions for all interactive elements */
+button, a, input, textarea {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Toaster customization (optional) */
+.Toastify__toast {
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
