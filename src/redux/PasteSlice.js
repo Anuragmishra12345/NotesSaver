@@ -13,27 +13,26 @@ export const pasteSlice = createSlice({
       const paste=action.payload;
       state.pastes.push(paste);
       localStorage.setItem("pastes",JSON.stringify(state.pastes));
-      toast.success("Paste created successfully");
+      toast.success("Note created successfully");
     },
     updateToPaste:(state,action)=>{
       const paste = action.payload;
       const index = state.pastes.findIndex(p => p._id === paste._id);
       if (index !== -1) {
         state.pastes[index] = paste;
-        toast.success("Paste updated successfully!");
+        toast.success("Note updated successfully!");
       }
       localStorage.setItem("pastes", JSON.stringify(state.pastes));
     },
     resetToPastes:(state,action)=>{
       state.pastes = [];
       localStorage.removeItem("pastes");
-      toast.success("All pastes cleared!");
     },
     removeFromPaste:(state,action)=> {
       const pasteId = action.payload;
       state.pastes = state.pastes.filter((p) => p._id !== pasteId);
       localStorage.setItem("pastes", JSON.stringify(state.pastes));
-      toast.success("Paste Deleted Successfully");
+    
     },
   },
 })

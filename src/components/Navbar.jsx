@@ -38,7 +38,7 @@ const Navbar = () => {
               }`
             }
           >
-            Pastes
+            My Notes
           </NavLink>
           <button
             onClick={handleLogout}
